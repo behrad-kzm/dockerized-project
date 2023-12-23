@@ -3,15 +3,11 @@ version: '3.8'
 services:
   backend_api:
     dockerfile: .Dockerfile
-    networks:
-      - backend_network
 
-  database:
+  mysql:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: example_password
       MYSQL_DATABASE: example_db
       MYSQL_USER: example_user
       MYSQL_PASSWORD: example_password
-    networks:
-      - backend_network
