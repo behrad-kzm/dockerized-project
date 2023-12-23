@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   backend_api:
-    dockerfile: .Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
 
   mysql:
     image: mysql:latest
